@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    height: 180vh;
+    overflow: hidden; /* Prevent the body from scrolling */
+    margin-bottom: 50px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-y: auto; /* Enable scrolling for the container */
+    height: calc(100vh - 60px); /* Full height minus header height */
+    background-image: url('../images/background.jpg'); /* Add the path to your background image here */
+    background-size: cover; /* Make the background cover the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    margin-bottom: 50px;
+}
+
+/* Fixed Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,53,129,1) 48%, rgba(0,95,255,1) 100%);
+    border: 2px solid #acb1b9;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+
+}
+.logo {
+    width: 50px;
+}
+
+.Textarea {
+    position: fixed;
+    max-height: 120px;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    z-index: 900;
+    margin-top: 100px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+    box-sizing: border-box;
+    height: calc(10vh - 30px);
+}
+.task-image{
+    width: 50px;
+    height: 50px;
+    padding:2px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 1px solid #777170;
+    align-items: center;
+}
+
+
+.task-image {
+    max-width: 100px; /* Limits the image size */
+    margin-bottom: 10px; /* Space between the image and the text */
+}
+
+#text {
+    font-size: 25px;
+    font-family: auto;
+    font-style: oblique;
+}
+
+.token-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.token-count {
+    background-color: #003581;
+    border-radius: 10px;
+    padding: 5px 5px;
+    border: 2px solid #acb1b9;
+    font-size: 1.2em;
+    color: #e1e6e5;
+    padding-right: 5px;
+    font-size: 24px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+/* Main Content Section */
+/* Task Section */
+.task-section {
+    margin-top: 250px; /* Offset to clear the fixed header and textarea */
+    padding-bottom: 10px; /* Offset for fixed navbar */
+    height: calc(70vh - 240px); /* Dynamic height calculation */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.ads-section{
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    z-index: 1000;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    max-width: 400px;
+    
+}
+
+
+/* Task Box */
+.task-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003581;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ece2e2;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #00ffcc;
+}
+#insta{
+    background: #833ab4;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+}
+/* Buttons */
+.task-button{
+    background-color: #00baff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verify-button {
+    background-color: #00ffcc;
+}
+
+.task-button:hover {
+    background-color: #007bbf;
+}
+
+/* Footer Menu */
+
+.navbar {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,53,129,1) 48%, rgba(0,95,255,1) 100%);
+    box-shadow: 0 -2px 5px hsla(0, 11%, 86%, 0.2); /* Shadow for depth */
+    padding: 10px 0; /* Padding around the menu */
+    position: fixed; /* Fix the menu at the bottom */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it sits above other content */
+    border-radius: 30px;
+    margin-bottom: 180px;
+    box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
+    
+
+
+}
+
+.menu {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the menu items */
+}
+
+.menu li {
+    margin: 0 20px; /* Spacing between menu items */
+    text-align: center; /* Center align text and icons */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for the menu items */
+    padding: 5px; /* Padding for better clickability */
+    display: flex; /* Flexbox for icon and text alignment */
+    flex-direction: column; /* Stack icon above text */
+    align-items: center; /* Center items horizontally */
+}
+
+.menu img {
+    width: 24px; /* Set a fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.menu a:hover {
+    background-color: #f5a623; /* Change background color on hover */
+    color: #fff; /* Ensure text remains readable */
+    border-radius: 5px; /* Rounded corners for hover */
+}

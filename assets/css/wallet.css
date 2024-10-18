@@ -1,0 +1,223 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Full height minus header and footer */
+}
+
+/* Fixed Header */
+
+/* Fixed Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #003581;
+    border: 2px solid #acb1b9;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 5px;
+
+}
+.logo {
+    width: 50px;
+}
+h1{
+    font-size: 24px;
+    font-family: 'i Icefrost', sans-serif;
+}
+
+.token-count {
+    background-color: #003581;
+    border-radius: 10px;
+    padding: 5px 5px;
+    border: 2px solid #acb1b9;
+    font-size: 1.2em;
+    color: #e1e6e5;
+    padding-right: 5px;
+    font-size: 24px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.wallet-info {
+    text-align: right;
+}
+
+.wallet-info p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Wallet Section */
+.wallet-section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.wallet-box {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.G{
+    float: left;
+    width: 20%;
+}
+.ton-wallet-btn {
+    background-color: #00baff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+/* Tabs Section */
+.tabs-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #aaa;
+    border: none;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #00baff;
+    color: #fff;
+}
+
+/* Withdraw Section */
+.withdraw-section {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.withdraw-section h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.withdraw-box {
+    margin-bottom: 20px;
+}
+
+.withdraw-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.withdraw-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.available-amount {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.withdraw-btn {
+    width: 100%;
+    background-color: #00baff;
+    border: none;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.withdraw-note {
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+/* Footer Navigation Menu */
+.navbar {
+    background-color: #003581; /* Background color of the menu */
+    box-shadow: 0 -2px 5px hsla(0, 11%, 86%, 0.2); /* Shadow for depth */
+    padding: 10px 0; /* Padding around the menu */
+    position: relative; /* Fix the menu at the bottom */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it sits above other content */
+    border-radius: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
+    
+    
+
+
+}
+
+.menu {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the menu items */
+}
+
+.menu li {
+    margin: 0 20px; /* Spacing between menu items */
+    text-align: center; /* Center align text and icons */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for the menu items */
+    padding: 5px; /* Padding for better clickability */
+    display: flex; /* Flexbox for icon and text alignment */
+    flex-direction: column; /* Stack icon above text */
+    align-items: center; /* Center items horizontally */
+}
+
+.menu img {
+    width: 24px; /* Set a fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.menu a:hover {
+    background-color: #27e696; /* Change background color on hover */
+    color: #fff; /* Ensure text remains readable */
+    border-radius: 5px; /* Rounded corners for hover */
+}

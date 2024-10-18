@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Earn Tokens</title>
+    <link rel="stylesheet" href="assets/css/task.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/i-icefrost" rel="stylesheet">
+
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            
+                <div class="token-count">
+                    G:<span class="points-display" id="balance">:0</span>
+                </div>
+            
+        </div>
+        <div class="Textarea">
+                <img src="assets/images/logo.png" alt="Gcoin Icon" class="task-image">
+                <span id="text">You must complete daily tasks </span>
+            
+        
+        </div>
+       
+        <!-- Tasks Section -->
+        <div class="task-section">
+            
+            <!--ads section-->
+                <div class="task-box">
+                    
+                    <!-- Task 1: Watch Ad -->
+                        <div class="task-content">
+                            <span class="add-icon ads-icon">ADS</span>
+                            <div class="add-text">
+                                <p>Watch Ad and Earn 10,000 Token Everytime</p>
+                            </div>
+                        </div>
+                        <button class="task-button">Perform</button>
+                    </div>
+            
+            <!-- Task 2: Subscribe Telegram -->
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="https://www.youtube.com/@BDMusicfest"></a><i class="fab fa-telegram-plane" style="color: rgb(10, 124, 231);"></i></a></span>
+                    <div class="task-text">
+                        <p>Subscribe Our Telegram</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+                 
+            </div>
+            <div id="task-message" style="display: none;"></div>
+            <!-- Task 3: Join Chat Group -->
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon group-icon"><a href="https://www.youtube.com/@BDMusicfest" target="_blank"><i class="fab fa-youtube" style="color:red;"></i></a></span>
+                    <div class="task-text">
+                        <p>Join our group</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+            <div id="task-message" style="display: none;"></div>
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-instagram" id="insta"></i></a></span>
+                    <div class="task-text">
+                        <p>Subscribe Our Telegram</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+            <div id="task-message" style="display: none;"></div>
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-twitter" style="color: rgb(25, 209, 200);"></i></a></span>
+                    <div class="task-text">
+                        <p>Follow Twitter</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+            <div id="task-message" style="display: none;"></div>
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-facebook-f" style="color: rgba(20, 93, 230, 0.705);"></i></a></span>
+                    <div class="task-text">
+                        <p>Follow Facebook</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+            <div id="task-message" style="display: none;"></div>
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+                    <div class="task-text">
+                        <p>Subscribe Youtube</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button">Perform</button>
+                <button class="task-button verify-button">Verify</button>
+            </div>
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+                    <div class="task-text">
+                        <p>Subscribe Our Telegram</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+            
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+                    <div class="task-text">
+                        <p>Subscribe Our Telegram</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+            <div id="task-message" style="display: none;"></div>
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+                    <div class="task-text">
+                        <p>Subscribe Our Telegram</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+            <div class="task-box">
+                <div class="task-content">
+                    <span class="task-icon telegram-icon"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+                    <div class="task-text">
+                        <p>Subscribe Our Telegram</p>
+                        <span>+250</span>
+                    </div>
+                </div>
+                <button class="task-button" id="perform-button" onClick="performTask()">
+                    <span class="icon">Perform</span>
+                </button>
+                <button class="task-button verify-button" id="verify-button" disabled>Verify</button>
+            </div>
+
+        </div>
+
+        <!-- Footer Navigation Menu -->
+         <div class="nav" style="background-color: black;">
+        <div class="navbar">
+            <ul class="menu">
+                <li><a href="index.html"><i class="fas fa-coins"></i> Earn</a></li>
+                 <li><a href="task.html"><i class="fas fa-tasks"></i> Task</a></li>
+                 <li><a href="frens.html"><i class="fas fa-user-friends"></i> Friend</a></li>
+                <li><a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // On page load, display the current points
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPoints = parseInt(localStorage.getItem("points"), 10);
+            document.querySelectorAll('.points-display').forEach(function(el) {
+                el.textContent = currentPoints;
+            });
+        });
+         // Step 1: On page load, display the current points
+         document.addEventListener('DOMContentLoaded', function () {
+            const currentPoints = parseInt(localStorage.getItem("points"), 10);
+            document.querySelectorAll('.points-display').forEach(function(el) {
+                el.textContent = currentPoints;  // Display the points from localStorage
+            });
+        });
+    </script>
+    
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/task.js"></script>
+</body>
+</html>

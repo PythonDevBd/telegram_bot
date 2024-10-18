@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    color: #f1eeee;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: #272525;
+    padding: 5px;
+    background-image: url('../images/background.jpg'); /* Add the path to your background image here */
+    background-size: cover; /* Make the background cover the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+/* Fixed Header */
+.header {
+    top: 2px;
+    left: 12px;
+    position: fixed;
+    padding-bottom: 10px;
+    width: 92%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,53,129,1) 48%, rgba(0,95,255,1) 100%);;
+    border: 2px solid #acb1b9;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+.logo {
+    width: 50px;
+}
+
+.token-count {
+    background-color: #003581;
+    border-radius: 10px;
+    padding: 5px 5px;
+    border: 2px solid #acb1b9;
+    font-size: 1.2em;
+    color: #e1e6e5;
+    padding-right: 5px;
+    font-size: 24px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Invite Section */
+.invite-section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.invite-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.invite-section p {
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+/* Invite Buttons */
+.invite-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.invite-btn {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%;
+}
+
+.share-btn {
+    background-color: #00baff;
+}
+
+.copy-btn {
+    background-color: #00baff;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background-color: #003581;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 48%;
+    border: 2px solid #00baff;
+}
+
+.stat-value {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+    color: #00ffcc;
+}
+
+/* Rewards Section */
+.rewards-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rewards-section h3 {
+    margin: 0;
+}
+
+.claim-rewards-btn {
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* No Frens Message */
+.no-frens-message {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+/* Footer Navigation Menu */
+.navbar {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,53,129,1) 48%, rgba(0,95,255,1) 100%);
+    box-shadow: 0 -2px 5px hsla(0, 11%, 86%, 0.2); /* Shadow for depth */
+    padding: 10px 0; /* Padding around the menu */
+    position: relative; /* Fix the menu at the bottom */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it sits above other content */
+    border-radius: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
+    
+    
+
+
+}
+
+.menu {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the menu items */
+}
+
+.menu li {
+    margin: 0 20px; /* Spacing between menu items */
+    text-align: center; /* Center align text and icons */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for the menu items */
+    padding: 5px; /* Padding for better clickability */
+    display: flex; /* Flexbox for icon and text alignment */
+    flex-direction: column; /* Stack icon above text */
+    align-items: center; /* Center items horizontally */
+}
+
+.menu img {
+    width: 24px; /* Set a fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.menu a:hover {
+    background-color: #27e696; /* Change background color on hover */
+    color: #fff; /* Ensure text remains readable */
+    border-radius: 5px; /* Rounded corners for hover */
+}

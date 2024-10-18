@@ -1,0 +1,336 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    color: #f1eeee;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: #272525;
+    padding: 5px;
+    background-image: url('../images/background.jpg'); /* Add the path to your background image here */
+    background-size: cover; /* Make the background cover the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    top: 0;
+
+}
+
+.logo {
+    width: 50px;
+}
+
+.username {
+    font-size: 0.9em;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gold-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 10px;
+    
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #00b894;
+}
+
+.profit {
+    background-color: #4a6dcf;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.balance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.point-display{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.coin-icon {
+    width: 30px;                  /* Make the image fill the icon container */
+    height: auto;                 /* Maintain aspect ratio */
+    border-radius: 50%;
+}
+
+.tap-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.tap-left, .tap-now {
+    padding: 10px 20px;
+    background-color: #4a6dcf;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.icon {
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tap{
+    margin-top: 50px;
+}
+/* Coin and floating animation styles */
+.tap-image {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Floating Image Animation */
+.floating-coin {
+    position: absolute;
+    width: 20px;  /* Fixed size for the floating coin */
+    height: 20px; /* Fixed size for the floating coin */
+    transition: opacity 1s ease-out;
+    pointer-events: none; /* Prevent interaction with the floating coin */
+    z-index: 1000; /* Ensure it floats above other elements */
+}
+
+/* Spin Animation for Tap Image */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spin-animation {
+    animation: spin 0.6s linear;
+}
+
+/* Tap Image */
+.tap-image {
+    position: relative;
+    transition: none; /* Ensure no position or size changes on tap */
+}
+
+
+/* Spin effect when the user taps the image */
+/* Add this to your assets/css/style.css file */
+.spin-animation {
+    animation: spin 0.6s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Floating animation */
+@keyframes float-coin {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.5);
+    }
+}
+
+
+.additional-section {
+    display: block;
+    box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
+    padding: 5px 5px ;
+    border-radius: 20px;
+    margin-bottom: 10px;
+   background-color: rgba(100, 100, 100, 0.3);
+        border-radius: 10px;
+        padding: 10px 15px;
+        margin: 20px 0;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    
+}
+/* Farming section styling */
+.farming-section {
+    flex-direction: row;
+    align-items: center;
+    display: block;
+    box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
+    padding: 5px 5px ;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.farm-button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.farming-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.farming-details {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Reverse the order of elements */
+}
+
+.lightning-icon {
+    margin-left: 5px; /* Adjust space between icon and next element */
+    margin-right: 10px;
+    
+}
+
+.farming-status {
+    margin-right: 10px; /* Adjust space between status and farming value */
+    margin-left: 30px;
+}
+
+.farming-value-container {
+    position: relative;
+    height: 25px; /* Limit the height to create a visible scroll effect */
+    overflow: hidden; /* Hide overflowing text */
+    margin-left: 10px; /* Adjust space between farming value and timer */
+}
+
+.farming-value-container {
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+    margin-left: 10px; /* Adjust space between farming value and timer */
+    display: flex;
+    align-items: center;
+}
+
+
+
+.farming-value {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fdd835;
+    animation: rollUp 1s ease-in-out infinite alternate; /* Rolling animation */
+    margin-left: 30px;
+}
+
+.timer {
+    font-weight: bold;
+    font-size: 1em;
+    color: #ccc;
+    margin-left: 30px;
+}
+
+
+.navbar {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,53,129,1) 48%, rgba(0,95,255,1) 100%);
+    box-shadow: 0 -2px 5px hsla(0, 11%, 86%, 0.2); /* Shadow for depth */
+    padding: 10px 0; /* Padding around the menu */
+    position: relative; /* Fix the menu at the bottom */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it sits above other content */
+    border-radius: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
+    
+    
+
+
+}
+
+.menu {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the menu items */
+}
+
+.menu li {
+    margin: 0 20px; /* Spacing between menu items */
+    text-align: center; /* Center align text and icons */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for the menu items */
+    padding: 5px; /* Padding for better clickability */
+    display: flex; /* Flexbox for icon and text alignment */
+    flex-direction: column; /* Stack icon above text */
+    align-items: center; /* Center items horizontally */
+}
+
+.menu img {
+    width: 24px; /* Set a fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.menu a:hover {
+    background-color: #27e696; /* Change background color on hover */
+    color: #fff; /* Ensure text remains readable */
+    border-radius: 5px; /* Rounded corners for hover */
+}

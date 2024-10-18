@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - iTon</title>
+    <link rel="stylesheet" href="assets/css/wallet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/i-icefrost" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            
+                <div class="token-count">
+                    G:<span class="points-display" id="balance">:0</span>
+                </div>
+            
+        </div>
+
+
+        <!-- Wallet Section -->
+        <div class="wallet-section">
+          
+            <div class="wallet-info">
+                
+            </div>
+            <div class="wallet-box">
+                <div class="G">
+                    <p>G:302k</p>
+                    <p>TON:0</p>
+               </div>
+                <button class="ton-wallet-btn">TON wallet</button>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs-section">
+            <button class="tab active">Withdraw</button>
+            <button class="tab">Swap</button>
+            <button class="tab">Transaction</button>
+        </div>
+
+        <!-- Withdraw Section -->
+        <div class="withdraw-section">
+            <h3>Withdraw TON</h3>
+            <div class="withdraw-box">
+                <label for="withdraw-amount">Enter amount</label>
+                <input type="text" id="withdraw-amount" placeholder="0">
+                <p class="available-amount">Available: 0 TON</p>
+            </div>
+            <button class="withdraw-btn">Withdraw TON</button>
+            <p class="withdraw-note">Note: Withdrawal status will be marked as "Pending" until processed.</p>
+        </div>
+
+        <!-- Footer Navigation Menu -->
+        <!-- Footer Navigation Menu -->
+        <div class="nav" style="background-color: black;">
+            <div class="navbar">
+                <ul class="menu">
+                    <li><a href="index.html"><i class="fas fa-coins"></i> Earn</a></li>
+                     <li><a href="task.html"><i class="fas fa-tasks"></i> Task</a></li>
+                     <li><a href="frens.html"><i class="fas fa-user-friends"></i> Friend</a></li>
+                    <li><a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
