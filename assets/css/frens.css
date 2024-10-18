@@ -3,7 +3,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     margin: 0;
     
     color: #f1eeee;
@@ -14,7 +13,7 @@ body {
     width: 90%;
     max-width: 400px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     background-color: #272525;
     padding: 5px;
     background-image: url('../images/background.jpg'); /* Add the path to your background image here */
@@ -161,7 +160,7 @@ body {
     width: 100%; /* Full width of the viewport */
     z-index: 1000; /* Ensure it sits above other content */
     border-radius: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
     
     
