@@ -4,7 +4,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1e1e1e;
     color: #fff;
-    height: 180vh;
     overflow: hidden; /* Prevent the body from scrolling */
     margin-bottom: 50px;
 }
@@ -19,7 +18,7 @@ body {
     background-size: cover; /* Make the background cover the entire screen */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 /* Fixed Header Section */
@@ -106,7 +105,7 @@ body {
 .task-section {
     margin-top: 250px; /* Offset to clear the fixed header and textarea */
     padding-bottom: 10px; /* Offset for fixed navbar */
-    height: calc(70vh - 240px); /* Dynamic height calculation */
+    height: calc(90vh - 240px); /* Dynamic height calculation */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
@@ -198,7 +197,7 @@ body {
     width: 100%; /* Full width of the viewport */
     z-index: 1000; /* Ensure it sits above other content */
     border-radius: 30px;
-    margin-bottom: 180px;
+    margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
     
 
