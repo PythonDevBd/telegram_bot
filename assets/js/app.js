@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // Check if Telegram Web App API is available
     if (window.Telegram && Telegram.WebApp) {
