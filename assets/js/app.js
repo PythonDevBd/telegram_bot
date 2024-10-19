@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+from this code document.addEventListener("DOMContentLoaded", function () {
     // Get the elements
     const pointsDisplay = document.getElementById("balances"); // Points display (balance)
     const claimButton = document.getElementById("claim-button");
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display the current rank, points, and Telegram username
     pointsDisplay.textContent = points;
-    userRankDisplay.textContent = `${telegramUsername} (CEO)`; // Use Telegram username
-    profitDisplay.textContent = `+${profitPerTap}`; // Show correct profit per tap
+    userRankDisplay.textContent = ${telegramUsername} (CEO); // Use Telegram username
+    profitDisplay.textContent = +${profitPerTap}; // Show correct profit per tap
 
     // Function to update points
     function updatePoints(amount) {
@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const tapX = tapRect.left + tapRect.width / 2 - 15; // Adjust to center
         const tapY = tapRect.top + tapRect.height / 2 - 15; // Adjust to center
 
-        floatingCoin.style.left = `${tapX}px`;
-        floatingCoin.style.top = `${tapY}px`;
+        floatingCoin.style.left = ${tapX}px;
+        floatingCoin.style.top = ${tapY}px;
         floatingCoin.style.opacity = 1;
 
         // Animate the floating image towards the coin icon in balance
@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentX = startX + (targetX - startX) * progress;
             const currentY = startY + (targetY - startY) * progress;
 
-            floatingCoin.style.left = `${currentX}px`;
-            floatingCoin.style.top = `${currentY}px`;
+            floatingCoin.style.left = ${currentX}px;
+            floatingCoin.style.top = ${currentY}px;
             floatingCoin.style.opacity = 1 - progress;
 
             if (progress < 1) {
@@ -113,8 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const claimX = claimRect.left + claimRect.width / 2 - 15; // Center of the claim button
         const claimY = claimRect.top + claimRect.height / 2 - 15;
 
-        floatingCoin.style.left = `${claimX}px`;
-        floatingCoin.style.top = `${claimY}px`;
+        floatingCoin.style.left = ${claimX}px;
+        floatingCoin.style.top = ${claimY}px;
         floatingCoin.style.opacity = 1;
 
         const coinRect = coinIcon.getBoundingClientRect();
@@ -132,8 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentX = claimX + (targetX - claimX) * progress;
             const currentY = claimY + (targetY - claimY) * progress;
 
-            floatingCoin.style.left = `${currentX}px`;
-            floatingCoin.style.top = `${currentY}px`;
+            floatingCoin.style.left = ${currentX}px;
+            floatingCoin.style.top = ${currentY}px;
             floatingCoin.style.opacity = 1 - progress;
 
             if (progress < 1) {
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
             userRank = "Gold";
         }
         localStorage.setItem("userRank", userRank);
-        userRankDisplay.textContent = `${telegramUsername} (CEO)`; // Update rank display
+        userRankDisplay.textContent = ${telegramUsername} (CEO); // Update rank display
     }
 
     // Boost button logic
@@ -164,12 +164,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (boostButton.disabled) return;
 
         profitPerTap = boostedProfit;
-        profitDisplay.textContent = `+${profitPerTap}`; // Show the boosted profit
+        profitDisplay.textContent = +${profitPerTap}; // Show the boosted profit
         boostButton.disabled = true;
 
         setTimeout(() => {
             profitPerTap =1; // Reset to base profit
-            profitDisplay.textContent = `+${profitPerTap}`; // Show the base profit again
+            profitDisplay.textContent = +${profitPerTap}; // Show the base profit again
             startCooldown();
         }, boostDuration);
     });
@@ -177,11 +177,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cooldown logic
     function startCooldown() {
         let cooldownTime = boostCooldown / 1000;
-        boostButton.textContent = `Cooldown (${cooldownTime}s)`;
+        boostButton.textContent = Cooldown (${cooldownTime}s);
 
         const countdown = setInterval(() => {
             cooldownTime--;
-            boostButton.textContent = `Cooldown (${cooldownTime}s)`;
+            boostButton.textContent = Cooldown (${cooldownTime}s);
 
             if (cooldownTime <= 0) {
                 clearInterval(countdown);
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
         farmingInterval = setInterval(() => {
             // Increment the farming value every second
             farmingValue += 0.001;
-            farmingValueElement.textContent = `฿ ${farmingValue.toFixed(3)}`;
+            farmingValueElement.textContent = ฿ ${farmingValue.toFixed(3)};
 
             // Update the timer
             if (seconds === 0) {
@@ -250,11 +250,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000); // Update every second (1000 milliseconds)
 
         function updateTimer() {
-            timerElement.textContent = `${hours}h ${minutes.toString().padStart(2, "0")}m ${seconds.toString().padStart(2, "0")}s`;
+            timerElement.textContent = ${hours}h ${minutes.toString().padStart(2, "0")}m ${seconds.toString().padStart(2, "0")}s;
         }
 
         function updateFarmingValue() {
-            farmingValueElement.textContent = `฿ ${farmingValue.toFixed(3)}`;
+            farmingValueElement.textContent = ฿ ${farmingValue.toFixed(3)};
         }
     }
 
@@ -279,8 +279,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function resetFarming() {
         // Reset farming value and timer
         farmingValue = 0.000;
-        farmingValueElement.textContent = `฿ ${farmingValue.toFixed(3)}`;
-        timerElement.textContent = `08h 00m 00s`;
+        farmingValueElement.textContent = ฿ ${farmingValue.toFixed(3)};
+        timerElement.textContent = 08h 00m 00s;
 
         // Show the farming button again
         farmButton.style.display = "block";
