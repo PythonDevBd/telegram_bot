@@ -7,6 +7,7 @@
 
     <!-- Include the Telegram WebApp SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,25 +16,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.cdnfonts.com/css/i-icefrost" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <img src="assets/images/logo.png" alt="Logo" class="logo">
-            <span class="username">Telegram Username (CEO)</span> <!-- Placeholder for Username -->
+            <span class="username">Telegram Username (CEO)</span> <!-- Placeholder to be replaced -->
         </header>
-
-        <!-- Stats Section -->
         <div class="stats">
             <div class="gold-progress">
                 <label>Gold</label>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 50%;"></div> <!-- Dynamically adjustable -->
+                    <div class="progress" style="width: 50%;"></div> <!-- Adjust width dynamically -->
                 </div>
                 <span>3/6</span>
             </div>
@@ -41,28 +35,21 @@
                 <span>Profit per tap: +3</span>
             </div>
         </div>
-
-        <!-- Tap Buttons Section -->
         <div class="tap-section">
             <button id="boostButton" class="tap-left">Boost</button>
             <button class="tap-now">G-Ton</button>
         </div>
-
-        <!-- Balance Section -->
         <div class="balance">
             <img src="assets/images/coin.png" alt="Coin Icon" class="coin-icon">
-            <span id="balances" class="point-display">566</span> <!-- Placeholder for dynamic balance -->
+            <span id="balances" class="point-display">566</span>
         </div>
-
-        <!-- Main Tap Section with Icon -->
         <div class="tap">
             <div class="icon">
                 <img id="tapImage" src="assets/images/tapimage.png" alt="Tap Image" class="tap-image">
             </div>
-            <div id="floating-points"></div> <!-- For points animation -->
+            <div id="floating-points"></div> <!-- For the points flow animation -->
         </div>
-
-        <!-- Farming Section -->
+        <!-- Firming value code -->
         <div class="farming-section">
             <button class="farm-button" id="farm-button">Farming Now</button>
             <div class="farming-info" id="farming-info" style="display: none;">
@@ -77,21 +64,19 @@
             </div>
             <button class="claim-button" id="claim-button" style="display: none;">Claim</button>
         </div>
-
-        <!-- Navigation Menu -->
         <div class="nav">
             <div class="navbar">
                 <ul class="menu">
                     <li><a href="index.html"><i class="fas fa-coins"></i> Earn</a></li>
                     <li><a href="task.html"><i class="fas fa-tasks"></i> Task</a></li>
-                    <li><a href="frens.html"><i class="fas fa-user-friends"></i> Friends</a></li>
+                    <li><a href="frens.html"><i class="fas fa-user-friends"></i> Friend</a></li>
                     <li><a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <!-- JavaScript for dynamic features -->
+    
+    <!-- Add script to expand the app to full screen and set username -->
     <script>
         window.onload = function() {
             // Expand the Telegram WebApp to full screen
@@ -131,5 +116,6 @@
         };
     </script>
 
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
