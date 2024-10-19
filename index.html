@@ -91,28 +91,6 @@
             } else if (user && user.first_name) {
                 document.querySelector('.username').innerText = user.first_name + ' (CEO)';
             }
-
-            // Example of dynamically adjusting the balance (replace this with actual logic)
-            let balance = 566; // Replace this with real-time logic if available
-            document.getElementById('balances').innerText = balance;
-
-            // Boost button logic example
-            document.getElementById('boostButton').addEventListener('click', function() {
-                alert('Boost Activated!'); // Replace with actual boost logic
-            });
-
-            // Farming button logic example
-            document.getElementById('farm-button').addEventListener('click', function() {
-                document.getElementById('farming-info').style.display = 'block';
-                document.getElementById('claim-button').style.display = 'block';
-            });
-
-            // Claim button logic example
-            document.getElementById('claim-button').addEventListener('click', function() {
-                alert('Claimed!'); // Replace with actual claim logic
-                document.getElementById('farming-info').style.display = 'none';
-                document.getElementById('claim-button').style.display = 'none';
-            });
         };
     </script>
 
