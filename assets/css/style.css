@@ -271,14 +271,14 @@ header {
     font-size: 1.2em;
     color: #fdd835;
     animation: rollUp 1s ease-in-out infinite alternate; /* Rolling animation */
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .timer {
     font-weight: bold;
     font-size: 1em;
     color: #ccc;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 
