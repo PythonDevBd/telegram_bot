@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
    
 
-
     // Function to promote user based on streak
     function promoteUser() {
         if (userRank === "Starter" && checkInStreak >= 10) {
@@ -216,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Set initial time (8 hours, 0 minutes, 0 seconds)
         let hours = 7;
         let minutes = 59;
-        
+        let seconds = 59; // Set to 10 seconds for testing
 
         // Update the timer and farming value immediately when farming starts
         updateTimer();
