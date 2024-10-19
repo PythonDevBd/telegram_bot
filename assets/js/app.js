@@ -1,4 +1,4 @@
-from this code document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Get the elements
     const pointsDisplay = document.getElementById("balances"); // Points display (balance)
     const claimButton = document.getElementById("claim-button");
