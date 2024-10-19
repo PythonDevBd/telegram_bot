@@ -244,7 +244,7 @@ header {
 }
 
 .farming-status {
-    margin-right: 10px; /* Adjust space between status and farming value */
+    margin-right: 5px; /* Adjust space between status and farming value */
     margin-left: 15px;
 }
 
