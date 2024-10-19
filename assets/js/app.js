@@ -219,45 +219,38 @@ document.addEventListener("DOMContentLoaded", () => {
         farmButton.style.display = "none";
         farmingInfo.style.display = "flex";
 
-        // Set initial time (8 hours, 0 minutes, 0 seconds)
-        let hours = 7;
-        let minutes = 59;
-        let seconds = 59; // Set to 10 seconds for testing
+        // Set initial time (8 hours, 0 minutes)
+        let hours = 8;
+        let minutes = 0;
 
         // Update the timer and farming value immediately when farming starts
         updateTimer();
         updateFarmingValue();
 
-        // Start the interval to update the timer and farming value every second
+        // Start the interval to update the timer and farming value every minute
         farmingInterval = setInterval(() => {
-            // Increment the farming value every second
+            // Increment the farming value every minute
             farmingValue += 0.001;
             farmingValueElement.textContent = `฿ ${farmingValue.toFixed(3)}`;
 
             // Update the timer
-            if (seconds === 0) {
-                if (minutes === 0) {
-                    if (hours === 0) {
-                        clearInterval(farmingInterval);
-                        showClaimButton();
-                        return; // Stop further execution when farming is complete
-                    } else {
-                        hours--;
-                        minutes = 59;
-                        seconds = 59;
-                    }
+            if (minutes === 0) {
+                if (hours === 0) {
+                    clearInterval(farmingInterval);
+                    showClaimButton();
+                    return; // Stop further execution when farming is complete
                 } else {
-                    minutes--;
-                    seconds = 59;
+                    hours--;
+                    minutes = 59;
                 }
             } else {
-                seconds--;
+                minutes--;
             }
             updateTimer();
-        }, 1000); // Update every second (1000 milliseconds)
+        }, 60000); // Update every minute (60000 milliseconds)
 
         function updateTimer() {
-            timerElement.textContent = `${hours}h ${minutes.toString().padStart(2, "0")}m ${seconds.toString().padStart(2, "0")}s`;
+            timerElement.textContent = `${hours}h ${minutes.toString().padStart(2, "0")}m`;
         }
 
         function updateFarmingValue() {
@@ -287,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Reset farming value and timer
         farmingValue = 0.000;
         farmingValueElement.textContent = `฿ ${farmingValue.toFixed(3)}`;
-        timerElement.textContent = `08h 00m 00s`;
+        timerElement.textContent = `08h 00m`;
 
         // Show the farming button again
         farmButton.style.display = "block";
