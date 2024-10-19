@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tap to Earn Game</title>
+
+    <!-- Include the Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,14 +16,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
-
-    
-    
+</head>
 <body>
     <div class="container">
         <header>
             <img src="assets/images/logo.png" alt="Logo" class="logo">
-            <span class="username">Telegram Username (CEO)</span>
+            <span class="username">Telegram Username (CEO)</span> <!-- Placeholder to be replaced -->
         </header>
         <div class="stats">
             <div class="gold-progress">
@@ -43,12 +45,11 @@
         </div>
         <div class="tap">
             <div class="icon">
-                <img id="tapImage" src="assets/images/tapimage.png " alt= "Tap Image" class="tap-image">
-                
+                <img id="tapImage" src="assets/images/tapimage.png" alt="Tap Image" class="tap-image">
             </div>
             <div id="floating-points"></div> <!-- For the points flow animation -->
         </div>
-        <!--Firming value code -->
+        <!-- Firming value code -->
         <div class="farming-section">
             <button class="farm-button" id="farm-button">Farming Now</button>
             <div class="farming-info" id="farming-info" style="display: none;">
@@ -63,10 +64,6 @@
             </div>
             <button class="claim-button" id="claim-button" style="display: none;">Claim</button>
         </div>
-        
-        
-        
-        
         <div class="nav">
             <div class="navbar">
                 <ul class="menu">
@@ -79,16 +76,24 @@
         </div>
     </div>
     
+    <!-- Add script to expand the app to full screen and set username -->
     <script>
+        window.onload = function() {
+            // Expand the Telegram WebApp to full screen
+            Telegram.WebApp.expand();
 
+            // Get user data from Telegram WebApp
+            const user = Telegram.WebApp.initDataUnsafe.user;
 
-       window.onload = function() {
-           openFullscreen();
-           if (typeof Telegram !== 'undefined' && Telegram.WebApp) {
-               Telegram.WebApp.expand();
-           }
-       };
-   </script>
+            // Check if user is logged in and replace username in the span
+            if (user && user.username) {
+                document.querySelector('.username').innerText = user.username + ' (CEO)';
+            } else if (user && user.first_name) {
+                document.querySelector('.username').innerText = user.first_name + ' (CEO)';
+            }
+        };
+    </script>
+
     <script src="assets/js/app.js"></script>
 </body>
 </html>
