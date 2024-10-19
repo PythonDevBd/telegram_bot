@@ -1,10 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if Telegram Web App API is available
-    if (window.Telegram && Telegram.WebApp) {
-        Telegram.WebApp.expand();
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     // Get the elements
     const pointsDisplay = document.getElementById("balances"); // Points display (balance)
@@ -155,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
    
 
+
     // Function to promote user based on streak
     function promoteUser() {
         if (userRank === "Starter" && checkInStreak >= 10) {
@@ -219,38 +213,45 @@ document.addEventListener("DOMContentLoaded", () => {
         farmButton.style.display = "none";
         farmingInfo.style.display = "flex";
 
-        // Set initial time (8 hours, 0 minutes)
-        let hours = 8;
-        let minutes = 0;
+        // Set initial time (8 hours, 0 minutes, 0 seconds)
+        let hours = 7;
+        let minutes = 59;
+        
 
         // Update the timer and farming value immediately when farming starts
         updateTimer();
         updateFarmingValue();
 
-        // Start the interval to update the timer and farming value every minute
+        // Start the interval to update the timer and farming value every second
         farmingInterval = setInterval(() => {
-            // Increment the farming value every minute
+            // Increment the farming value every second
             farmingValue += 0.001;
             farmingValueElement.textContent = `฿ ${farmingValue.toFixed(3)}`;
 
             // Update the timer
-            if (minutes === 0) {
-                if (hours === 0) {
-                    clearInterval(farmingInterval);
-                    showClaimButton();
-                    return; // Stop further execution when farming is complete
+            if (seconds === 0) {
+                if (minutes === 0) {
+                    if (hours === 0) {
+                        clearInterval(farmingInterval);
+                        showClaimButton();
+                        return; // Stop further execution when farming is complete
+                    } else {
+                        hours--;
+                        minutes = 59;
+                        seconds = 59;
+                    }
                 } else {
-                    hours--;
-                    minutes = 59;
+                    minutes--;
+                    seconds = 59;
                 }
             } else {
-                minutes--;
+                seconds--;
             }
             updateTimer();
-        }, 60000); // Update every minute (60000 milliseconds)
+        }, 1000); // Update every second (1000 milliseconds)
 
         function updateTimer() {
-            timerElement.textContent = `${hours}h ${minutes.toString().padStart(2, "0")}m`;
+            timerElement.textContent = `${hours}h ${minutes.toString().padStart(2, "0")}m ${seconds.toString().padStart(2, "0")}s`;
         }
 
         function updateFarmingValue() {
@@ -280,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Reset farming value and timer
         farmingValue = 0.000;
         farmingValueElement.textContent = `฿ ${farmingValue.toFixed(3)}`;
-        timerElement.textContent = `08h 00m`;
+        timerElement.textContent = `08h 00m 00s`;
 
         // Show the farming button again
         farmButton.style.display = "block";
