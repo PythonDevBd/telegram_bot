@@ -204,7 +204,7 @@ header {
     align-items: center;
     display: block;
     box-shadow: 0 4px 8px rgba(160, 157, 157, 0.808); /* Shadow effect */
-    padding: 5px 5px ;
+    padding: 10px 5px ;
     border-radius: 20px;
     margin-bottom: 10px;
 }
